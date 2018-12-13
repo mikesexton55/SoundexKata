@@ -11,6 +11,7 @@ public:
 };
 
 #include "gmock/gmock.h"
+using ::testing::Eq;
 
 /**
  * Retain the first letter of the name and drop all other occurrences of a, e, i, o, u, y, h, w.
