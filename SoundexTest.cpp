@@ -44,6 +44,13 @@ TEST_F(SoundexEncoding, ReplaceConsonantsWithAppropriateLetters)
     //Arrange
     // Act
     // Assert
-    ASSERT_THAT(soundex.encode("Ab"), testing::Eq("A100"));
+    EXPECT_THAT(soundex.encode("Ab"), testing::Eq("A100"));
+    EXPECT_THAT(soundex.encode("Ac"), testing::Eq("A200"));
+    EXPECT_THAT(soundex.encode("Ad"), testing::Eq("A300"));
+    EXPECT_THAT(soundex.encode("Al"), testing::Eq("A400"));
+    EXPECT_THAT(soundex.encode("Am"), testing::Eq("A500"));
+    EXPECT_THAT(soundex.encode("Ar"), testing::Eq("A600"));
+    EXPECT_THAT(soundex.encode("Av"), testing::Eq("A100"));
+    EXPECT_THAT(soundex.encode("Ax"), testing::Eq("A200"));
 }
 
